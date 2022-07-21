@@ -1,5 +1,10 @@
 //Bài 5
 /**Mô Hình 3 Khối */
+//Đầu vào:
+//-Cho người dùng nhập ngày tháng năm
+
+//Xử lí
+
 // Ngày mai
 function ngayMai() {
   var ngay = +document.getElementById(`ngay`).value;
@@ -85,8 +90,6 @@ function ngayMai() {
       }
       break;
   }
-  // document.getElementById(`ketQua`).value =
-  //   "ngày " + ngay + " tháng " + thang + " năm " + nam;
 }
 
 // Ngày hôm qua
@@ -188,14 +191,15 @@ function ngayHomQua() {
       }
       break;
   }
-
-  // document.getElementById(`ketQua`).value =
-  //   "ngày " + ngay + " tháng " + thang + " năm " + nam;
 }
+//Đầu ra:
+//-Xuất ra output ngày kế tiếp và ngày hôm qua
 
 //Bài 6
 /**Mô Hình 3 khối */
-
+//Đầu vào
+//-Cho người dùng nhập tháng và năm
+//Xử lí:
 document.getElementById(`hienThi`).onclick = function () {
   var tagYear = Number(document.getElementById(`year`).value);
   var tagMonth = Number(document.getElementById(`month`).value);
@@ -261,9 +265,14 @@ document.getElementById(`hienThi`).onclick = function () {
   document.getElementById(`footer`).className =
     "card-footer text-center bg-danger";
 };
+//Đầu ra:
+//-Xuất ra output tháng đó có bao nhiêu ngày (bao gồm tháng của năm nhuận)
 
 // Bài 7
 /**Mô hình 3 khối */
+//Đầu vào:
+//-Cho người dùng nhập 3 số nguyên
+//Xử lí:
 document.getElementById("nut").onclick = function () {
   var tagSoNguyen = document.getElementById(`soNguyen`).value * 1;
   var tagHangTram = Math.floor(tagSoNguyen / 100);
@@ -395,45 +404,49 @@ document.getElementById("nut").onclick = function () {
   document.getElementById(`process`).value =
     "Kết quả là :" + hangTram + hangChuc + hangDonVi;
 };
+//Đầu ra:
+//-In ra output cách đọc
 
 // bài 8
 /**Mô hình 3 khối */
-
+//Đầu vào:
+//-Cho người dùng nhập tên,tọa độ nhà của 3 sinh viên và tọa độ trường học
+//Xử lí:
 document.getElementById("tinhToan").onclick = function () {
   //tên học sinh 1,2,3
   var tagTenHs1 = document.getElementById(`tenHs1`).value;
   var tagTenHs2 = document.getElementById(`tenHs2`).value;
   var tagTenHs3 = document.getElementById(`tenHs3`).value;
   //tọa độ học sinh 1
-  var tagToaDoX1 = document.getElementById(`toaDoX1`).value * 1;
-  var tagToaDoY1 = document.getElementById(`toaDoY1`).value * 1;
+  var tagToaDoXHs1 = document.getElementById(`toaDoX1`).value * 1;
+  var tagToaDoYHs1 = document.getElementById(`toaDoY1`).value * 1;
   //tọa độ học sinh 2
-  var tagToaDoX2 = document.getElementById(`toaDoX2`).value * 1;
-  var tagToaDoY2 = document.getElementById(`toaDoY2`).value * 1;
+  var tagToaDoXHs2 = document.getElementById(`toaDoX2`).value * 1;
+  var tagToaDoYHs2 = document.getElementById(`toaDoY2`).value * 1;
   //tọa độ học sinh 3
-  var tagToaDoX3 = document.getElementById(`toaDoX3`).value * 1;
-  var tagToaDoY3 = document.getElementById(`toaDoY3`).value * 1;
+  var tagToaDoXHs3 = document.getElementById(`toaDoX3`).value * 1;
+  var tagToaDoYHs3 = document.getElementById(`toaDoY3`).value * 1;
   //tọa độ trường học
-  var tagToaDoXTrH = document.getElementById(`toaDoXTrh`).value * 1;
-  var tagToaDoYTrH = document.getElementById(`toaDoYTrh`).value * 1;
+  var tagToaDoXTruong = document.getElementById(`toaDoXTrh`).value * 1;
+  var tagToaDoYTruong = document.getElementById(`toaDoYTrh`).value * 1;
 
   //tính độ dài của học sinh 1 so với trường
   var calcStudent1 = 0;
   calcStudent1 = Math.sqrt(
-    Math.pow(tagToaDoX1 - tagToaDoXTrH, 2) +
-      Math.pow(tagToaDoY1 - tagToaDoYTrH, 2)
+    Math.pow(tagToaDoXHs1 - tagToaDoXTruong, 2) +
+      Math.pow(tagToaDoYHs1 - tagToaDoYTruong, 2)
   );
   //tính độ dài của học sinh 2 so với trường
   var calcStudent2 = 0;
   calcStudent2 = Math.sqrt(
-    Math.pow(tagToaDoX2 - tagToaDoXTrH, 2) +
-      Math.pow(tagToaDoY2 - tagToaDoYTrH, 2)
+    Math.pow(tagToaDoXHs2 - tagToaDoXTruong, 2) +
+      Math.pow(tagToaDoYHs2 - tagToaDoYTruong, 2)
   );
   //tính độ dài của học sinh 1 so với trường
   var calcStudent3 = 0;
   calcStudent3 = Math.sqrt(
-    Math.pow(tagToaDoX3 - tagToaDoXTrH, 2) +
-      Math.pow(tagToaDoY3 - tagToaDoYTrH, 2)
+    Math.pow(tagToaDoXHs3 - tagToaDoXTruong, 2) +
+      Math.pow(tagToaDoYHs3 - tagToaDoYTruong, 2)
   );
   if (calcStudent1 > calcStudent2 && calcStudent1 > calcStudent3) {
     document.getElementById(`final`).value =
@@ -445,3 +458,5 @@ document.getElementById("tinhToan").onclick = function () {
     "Học sinh xa trường nhất là " + tagTenHs3;
   }
 };
+//Đầu ra:
+//-Xuất ra output tên của học sinh xa trường nhất
