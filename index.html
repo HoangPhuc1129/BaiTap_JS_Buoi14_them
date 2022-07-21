@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bài tập JS buổi 4 thêm</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <!-- Bài 5 -->
+      <strong>Bài 5</strong>
+      <div class="row mt-3">
+        <div class="card col-md-4">
+          <div class="card-header"></div>
+          <input
+            type="text"
+            id="ngay"
+            placeholder="Nhập ngày"
+            class="form-control alert alert-warning mt-3"
+          />
+          <input
+            type="text"
+            id="thang"
+            placeholder="Nhập tháng"
+            class="form-control alert alert-success"
+          />
+          <input
+            type="text"
+            id="nam"
+            placeholder="Nhập năm"
+            class="form-control alert alert-info"
+          />
+          <div class="d-flex mb-3">
+            <button onclick="ngayMai()" class="btn btn-primary w-50">
+              Ngày Mai
+            </button>
+            <button onclick="ngayHomQua()" class="btn btn-secondary w-50">
+              Ngày Hôm Qua
+            </button>
+          </div>
+          <input
+            type="text"
+            id="ketQua"
+            placeholder="Kết Quả"
+            class="form-control alert alert-danger"
+          />
+          <div class="card-footer text-muted"></div>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <!-- Bài 6 -->
+      <strong>Bài 6</strong>
+      <div class="card mt-4">
+        <div class="card-header"></div>
+        <div class="container">
+          <div class="form-group">
+            <label>Năm</label>
+            <input
+              type="text"
+              class="form-control"
+              id="year"
+              placeholder=" Nhập năm tại đây"
+            />
+          </div>
+          <div class="form-group">
+            <label>Tháng</label>
+            <input
+              type="text"
+              class="form-control"
+              id="month"
+              placeholder="Nhập tháng tại đây"
+            />
+          </div>
+          <div class="d-flex justify-content-center mb-3">
+            <button id="hienThi" class="btn btn-success w-25">Hiển Thị</button>
+          </div>
+        </div>
+
+        <div id="footer" class="card-footer text-muted"></div>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <!-- Bài 7 -->
+      <strong>Bài 7</strong>
+
+      <label>Nhập Số Nguyên Có 3 Chữ Số</label>
+      <input
+        type="text"
+        id="soNguyen"
+        placeholder="Nhập số tại đây"
+        class="form-control w-50 alert alert-primary mt-3"
+      />
+      <button id="nut" class="btn btn-warning mb-3">Process</button>
+      <input
+        type="text"
+        id="process"
+        placeholder="Kết Quả"
+        class="form-control w-50 alert alert-danger"
+      />
+      <br />
+      <hr />
+      <br />
+      <!-- Bài 8 -->
+      <strong>Bài 8</strong>
+      <div class="row mt-4">
+        <div class="col-4">
+          <div class="form-group">
+            <label>Học Sinh 1</label>
+            <input
+              type="text"
+              class="form-control"
+              id="tenHs1"
+              placeholder="Nhập tên tại đây"
+            />
+          </div>
+          <div class="form-group">
+            <label>Tọa độ x của học sinh 1</label>
+            <input
+              type="text"
+              class="form-control"
+              id="toaDoX1"
+              placeholder="Nhập tọa độ x tại đây"
+            />
+          </div>
+          <div class="form-group">
+            <label>Tọa độ y của học sinh 1</label>
+            <input
+              type="text"
+              class="form-control"
+              id="toaDoY1"
+              placeholder="Nhập tọa độ y tại đây"
+            />
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label>Học Sinh 2</label>
+            <input
+              type="text"
+              class="form-control"
+              id="tenHs2"
+              placeholder="Nhập tên tại đây"
+            />
+          </div>
+          <div class="form-group">
+            <label>Tọa độ x của học sinh 2</label>
+            <input
+              type="text"
+              class="form-control"
+              id="toaDoX2"
+              placeholder="Nhập tọa độ x tại đây"
+            />
+          </div>
+          <div class="form-group">
+            <label>Tọa độ y của học sinh 2</label>
+            <input
+              type="text"
+              class="form-control"
+              id="toaDoY2"
+              placeholder="Nhập tọa độ y tại đây"
+            />
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label>Học Sinh 3</label>
+            <input
+              type="text"
+              class="form-control"
+              id="tenHs3"
+              placeholder="Nhập tên tại đây"
+            />
+          </div>
+          <div class="form-group">
+            <label>Tọa độ x của học sinh 3</label>
+            <input
+              type="text"
+              class="form-control"
+              id="toaDoX3"
+              placeholder="Nhập tọa độ x tại đây"
+            />
+          </div>
+          <div class="form-group">
+            <label>Tọa độ y của học sinh 3</label>
+            <input
+              type="text"
+              class="form-control"
+              id="toaDoY3"
+              placeholder="Nhập tọa độ y tại đây"
+            />
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="form-group mr-4 ml-3">
+            <label>Tọa độ x của trường học</label>
+            <input
+              type="text"
+              class="form-control"
+              id="toaDoXTrh"
+              placeholder="Nhập tọa độ x tại đây"
+            />
+          </div>
+          <div class="form-group">
+            <label>Tọa độ y của trường học</label>
+            <input
+              type="text"
+              class="form-control"
+              id="toaDoYTrh"
+              placeholder="Nhập tọa độ y tại đây"
+            />
+          </div>
+        </div>
+      </div>
+      <div>
+        <button id="tinhToan" class="btn btn-warning mb-3">Tính Toán</button>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="final" placeholder="" />
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
